@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" /> -->
+    <!-- <link rel="stylesheet" href="iconfont/iconfont.css"> -->
+    <link rel="stylesheet" href="./css/blueCollar.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+	<!-- <script type="text/javascript" src="../src/login.js"></script> -->
+    <script>
+    $(function() {
+        $('.btn_login').click(function() {
+            window.location.href="index.html"
+        });
+    });
+    </script>
+</head>
+
+<body class="login_bg">
+    <div class="login_top clearfix">
+        <div class="login_auto">
+            <div class="fl topName">
+                <a href="javascript:;" class="fl"><img src="../src/images/logo.png" alt=""></a>
+                <div class="tr_title font_blue1">
+                    职来职往蓝领招工后台管理
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login_main clearfix">
+        <div class="login_box border_r3 clearfix">
+            <div class="title_div">
+                管理员登录
+            </div>
+            <div class="tabBox_con">
+                <div class="total_login">
+                    <div class="login_inp">
+                        <i class="iconfont iconshouji-copy"></i>
+                        <input type="text" id="userName" name="userName" placeholder="请输入手机号码" />
+                        <!-- <p class="error">手机号码/注册邮箱不正确</p> -->
+                    </div>
+                    <div class="login_inp">
+                        <i class="iconfont iconmima"></i>
+                        <input type="password" id="userPwd" name="userPwd" placeholder="请输入密码" />
+                    </div>
+                    <div class="login_inp clearfix">
+                        <i class="iconfont iconyanzhengma1"></i>
+                        <input type="text" class="checkText" placeholder="请输入图片验证码" />
+                        <img id="checkImg" src="http://120.76.101.219:9080/vlive.web/captcha/generate" title="看不清？点击换一张" class="checkPic">
+                    </div>
+                    <br />
+                    <div class="m_t15 m_b20">
+                        <input type="button" class="btn_theme btn_login" value="登录" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo_bg"></div>
+    </div>
+    <div class="footer">&nbsp;</div>
+</body>
+
+</html>

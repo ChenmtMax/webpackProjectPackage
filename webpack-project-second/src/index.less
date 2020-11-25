@@ -1,0 +1,55 @@
+@color: #FF7F2E;
+body{
+	padding: 30px;
+	background-color: @color;
+	transition: all 2s;
+	background: url(./images/logo.png) no-repeat;
+}
+.box{
+	position: relative;
+	margin: 200px auto;
+	width: 100px;
+	height: 100px;
+	color: #fff;
+	background-color: #FF7F2E;
+	transform: rotateZ(-45deg);
+	animation: peng .8s infinite alternate linear,
+				move 1s; // 动画模式 - 持续alternate是从 0%-100%的顺序动画 alternate-reverse是从100%到 0%的顺序动画
+}
+@keyframes peng{
+	0%{
+		transform: scale(.5) rotateZ(-45deg);
+	}
+	100%{
+		transform: scale(1) rotateZ(-45deg);
+	}
+}
+@keyframes move{
+	0%{
+		left: 0;
+	}
+	100%{
+		left: 500px;
+	}
+}
+.box::before, .box::after{
+	content: '';
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	display: block;
+	border-radius: 50%;
+	background-color: #FF7F2E;
+}
+.box::before{
+	top: -50px;
+}
+.box::after{
+	top: 0;
+	right: -50px;
+}
+.text{
+	position: relative;
+	z-index: 1;
+	transform: rotateZ(45deg) translateX(30px);
+}

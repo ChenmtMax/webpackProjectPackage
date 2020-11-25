@@ -1,0 +1,18 @@
+动态配置该 index.html 的相应加载模块。需要在当前目录下加上对应的 config.js 文件
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<% if(htmlWebpackPlugin.options.config.header) { %>
+		<link rel="stylesheet" type="text/css" href="//common/css/header.css" />
+		<% } %>
+		<title><%= (htmlWebpackPlugin.options.config.title) %></title>
+	</head>
+	<body>
+		<% if(htmlWebpackPlugin.options.config.header) { %>
+		<script type="text/text/javascript" href="//common/header.min.js" />
+		<% } %>
+	</body>
+</html>

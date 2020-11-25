@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="zh">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/blueCollar.css"/>
+	<script type="text/javascript" src='./js/jquery-1.11.3.min.js'></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="../src/index.js"></script> -->
+	<script src="/dll/react.dll.8423d7.js"></script>
+ </head>
+ <body>
+ 	<div>hello webpack</div>
+	<button type="button" id="btn">按钮</button>
+	<img src="../src/images/default-logo.jpg" />
+	
+	<!-- <div class="box">
+		<div class="text">小心心在哪里~ 在这里。</div>
+	</div> -->
+	
+	
+	<img src="<%= require('../src/images/default-logo.jpg') %>" />
+	<script type="text/javascript">
+		document.getElementById('btn').onclick = function() {
+		    // import('./js/handle').then(fn => console.log(fn));
+			import('./js/handle.js');
+		}
+		$('btn').css('background-color', '#f8f8f8');
+	</script>
+ </body>
+ </html>
